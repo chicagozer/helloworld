@@ -4,15 +4,15 @@ provider "helm" {
     }
 }
 
-resource "helm_release" "rtdb" {
+resource "helm_release" "helloworld" {
   namespace = var.namespace
-  name       = "rtdb"
+  name       = "helloworld"
   repository = "https://chicagozer.github.io/helm-chart/"
-  chart      = "rtdb"
+  chart      = "helloworld"
   
   set {
     name  = "image.tag"
-    value = "${lookup(var.app_version,"rtdb")}"
+    value = "${lookup(var.app_version,"helloworld")}"
   }
   set {
     name  = "image.repository"

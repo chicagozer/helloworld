@@ -4,7 +4,8 @@ backend "remote" {
     organization = "rheosoft"
 
     workspaces {
-      prefix = "rtdb-"
+#      prefix = "rtdb-"
+       name = "helloworld"
     }
   }
 

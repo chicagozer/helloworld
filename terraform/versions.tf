@@ -1,12 +1,12 @@
 terraform {
   
-   backend "remote" {
-    organization = "rheosoft"
-
-    workspaces {
-      name = "rtdb"
-    }
-  }
+#   backend "remote" {
+#    organization = "rheosoft"
+#
+#    workspaces {
+#      name = "rtdb"
+#    }
+#  }
 
   required_providers {
     helm = {

@@ -10,6 +10,7 @@ resource "helm_release" "helloworld" {
   name       = "helloworld"
   repository = "https://chicagozer.github.io/helm-chart/"
   chart      = "helloworld"
+  create_namespace = true
   
   set {
     name  = "image.tag"

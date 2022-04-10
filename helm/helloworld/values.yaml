@@ -9,6 +9,7 @@ twitterTokenSecret: <+serviceConfig.serviceDefinition.spec.variables.TWITTER_TOK
 
 
 replicaCount: 1
+domain: coxeksdemo.com
 
 image:
   repository: public.ecr.aws/d5y7k0n6/helloworld
@@ -42,7 +43,7 @@ service:
   port: 8008
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"

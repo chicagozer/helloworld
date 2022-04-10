@@ -20,4 +20,12 @@ resource "helm_release" "helloworld" {
     name  = "image.repository"
     value = var.repository
   }
+  set {
+    name  = "service.port"
+    value = var.service_port
+  }
+  set {
+    name  = "service.type"
+    value = var.service_type
+  }
 }

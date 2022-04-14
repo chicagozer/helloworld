@@ -31,6 +31,11 @@ variable "app_version" {
   description = "version to deploy"
 }
 
+variable "replica_count" {
+  type = map
+  description = "count of pods"
+}
+
 variable "chart_version" {
   type = map
   description = "version to deploy"

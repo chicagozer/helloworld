@@ -17,6 +17,12 @@ resource "helm_release" "helloworld" {
     name  = "image.tag"
     value = "${lookup(var.app_version,"helloworld")}"
   }
+
+  set {
+    name  = "replicaCount"
+    value = lookup(var.replica_count, "helloworld")
+  }
+
   set {
     name  = "image.repository"
     value = var.repository
